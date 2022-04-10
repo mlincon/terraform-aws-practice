@@ -74,7 +74,7 @@ variable "ec2_user_data" {
   description = "The name of the user data file"
 }
 
-variable "pem_key_name" {
+variable "ec2_key_name" {
   type        = string
   description = "The key name of the Key Pair to use for the instance"
 }

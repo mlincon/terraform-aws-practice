@@ -1,5 +1,6 @@
 locals {
   ec2_user_data = "${path.module}/${var.ec2_user_data}"
+  ec2_key_name = "${path.module}/${var.ec2_key_name}"
 }
 
 
@@ -25,6 +26,6 @@ module "public-private-subnet" {
   ami_id            = var.ami_id
   ec2_instance_type = var.ec2_instance_type
   ec2_user_data     = local.ec2_user_data
-  pem_key_name      = var.pem_key_name
+  ec2_key_name      = local.ec2_key_name
 
 }

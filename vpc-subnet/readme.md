@@ -39,6 +39,7 @@ The two subnets are isolated and require internet gateway (IG) to connect to the
 **Create an EC2 instance in public subnet**
 - Assign the EC2 to the public subnet and assign the security group
 - Start a Apache web server via User Data option. The server serves a sample webpage that shows the current local date and time. Since the security group allows HTTP requests, the webpage should be accessible via browser.
+- We keep the default storage and do not add a key pair
 
     6.4. Create an EC2 instance  
 7. Private subnet  

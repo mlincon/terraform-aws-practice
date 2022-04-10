@@ -22,4 +22,4 @@ private_subnet_cidr_netnunm = 1
 ami_id            = "ami-0dcc0ebde7b2e00db" // Amazon Linux 2 (HVM)
 ec2_instance_type = "t2.micro"
 ec2_user_data     = "user_data/user_data.sh"
-pem_key_name      = "ec2-ssh"
+ec2_key_name      = "key/ec2-ssh.pem"
