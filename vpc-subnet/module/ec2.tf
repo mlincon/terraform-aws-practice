@@ -1,3 +1,6 @@
+# define a key for SSH login
+
+
 # The EC2 is inside the public subet
 resource "aws_instance" "ec2" {
   ami           = var.ami_id
@@ -11,7 +14,7 @@ resource "aws_instance" "ec2" {
   associate_public_ip_address = true
 
   // start a webserver via user data
-  user_data = file("${path.module}/user_data/user_data.sh")
+  user_data = file(var.ec2_user_data)
 
   tags = var.default_tags
 }

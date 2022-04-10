@@ -1,3 +1,8 @@
+locals {
+  ec2_user_data = "${path.module}/${var.ec2_user_data}"
+}
+
+
 module "public-private-subnet" {
 
   source = "./module"
@@ -19,6 +24,7 @@ module "public-private-subnet" {
   # EC2
   ami_id            = var.ami_id
   ec2_instance_type = var.ec2_instance_type
+  ec2_user_data     = local.ec2_user_data
   pem_key_name      = var.pem_key_name
 
 }
