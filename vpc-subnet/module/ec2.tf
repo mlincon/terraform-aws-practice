@@ -10,5 +10,8 @@ resource "aws_instance" "ec2" {
   // whether to associate public IP address with an instance in VPC
   associate_public_ip_address = true
 
+  // start a webserver via user data
+  user_data = file("${path.module}/user_data/user_data.sh")
+
   tags = var.default_tags
 }

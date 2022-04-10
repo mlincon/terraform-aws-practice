@@ -2,7 +2,7 @@
 
 AWS VPC with Private and Public Subnets via Terraform
 
-![diagram](image/diagram.jpg)
+![diagram](docu/diagram.jpg)
 
 ### Steps
 
@@ -33,13 +33,12 @@ The two subnets are isolated and require internet gateway (IG) to connect to the
 - Associate the routing table to the public subnet to provide the Internet Gateway address, thus direct traffic to the IG allowing access to and from the Internet
 
 **Create a security group**
-- Security groups enable to specify inbound and outbound traffic to and from the EC2 instance
-- Create a Security Group for the EC2 instance, so that it is possible to access it by SSH  
+- Security groups enable to specify inbound and outbound traffic to and from the EC2 instance.
+- Create a Security Group for the EC2 instance, so that it is possible to access it by SSH.
 
 **Create an EC2 instance in public subnet**
 - Assign the EC2 to the public subnet and assign the security group
-- Start a Apache web server via User Data option
-
+- Start a Apache web server via User Data option. The server serves a sample webpage that shows the current local date and time. Since the security group allows HTTP requests, the webpage should be accessible via browser.
 
     6.4. Create an EC2 instance  
 7. Private subnet  
