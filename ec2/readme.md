@@ -60,25 +60,3 @@ For HTTPS connection, set the ports at `443` and `TCP` as protocol.
 To allow all sorts of traffic, set `protocol="-1"` (i.e. `All`), `from_port` and `to_port` to `0`.
 
 
-### Terraform `tfvars` File
-
-This file is used to provide values to variables.  
-Alternatively, either use default values or provide the values during infrastructure provision
-
-Terraform also automatically loads variable definitions files if:
-- the files are named exactly `terraform.tfvars` or `terraform.tfvars.json`
-- the file name ends in `.auto.tfvars` or `.auto.tfvars.json`
-
-If the file name is say, variables.tfvars, specify that file in command line `terraform apply -var-file="variables.tfvars"`
-
-### Terraform Commands
-
-- `terraform init`: initiate terraform, install provider  
-- `terraform fmt --recursive`: format code, `--recursive` for also any files inside sub-folders
-- `terraform validate`: validate code  
-- `terraform plan`: plan before provisining infrastructure  
-- `terraform apply`: provision infrastructure  
-- `terraform destroy`: nuke infrastructure  
-- `terraform output`: list all outputs  
-
-use `--auto-approve` option with `apply` and `destroy` to skip confirmation message
